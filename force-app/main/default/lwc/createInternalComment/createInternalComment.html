@@ -1,6 +1,7 @@
 <template>
     <lightning-quick-action-panel header="Internal Comment" class={headerCss}>
         <lightning-record-edit-form object-api-name="Internal_Comment__c" onsuccess={handleSuccess}>
+            <lightning-messages></lightning-messages>
             <lightning-input-field field-name="Body__c" variant="label-hidden" onchange={handleCommentChange}></lightning-input-field>
         </lightning-record-edit-form>
         <div slot="footer">
