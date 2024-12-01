@@ -1,0 +1,11 @@
+<template>
+    <lightning-quick-action-panel header="Internal Comment" class={headerCss}>
+        <lightning-record-edit-form object-api-name="Internal_Comment__c" onsuccess={handleSuccess}>
+            <lightning-input-field field-name="Body__c" variant="label-hidden" onchange={handleCommentChange}></lightning-input-field>
+        </lightning-record-edit-form>
+        <div slot="footer">
+            <lightning-button variant="neutral" label="Cancel" onclick={cancel}></lightning-button>
+            <lightning-button variant="brand" label="Save" disabled={disableSave} onclick={save} class="slds-m-left_x-small"></lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>
